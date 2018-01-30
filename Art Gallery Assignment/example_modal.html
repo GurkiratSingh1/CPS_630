@@ -269,7 +269,7 @@ function doSomething(res)
   a+= "</table>";
     document.getElementById("p").innerHTML = a;
 
-  modal.style.display = "block";
+  modal.modal();
 
   window.onclick = function(event) {
     if (event.target == modal) {
