@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #ffdc00;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+
+body {
+    background-color: #002D72;
+}
+
+h1 {
+    font-family: 'Replica-Bold',Arial,sans-serif;
+	font-size: 60px;
+	margin-top: 300px;
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-family: 'Replica-Bold',Arial,sans-serif;
+    font-size: 30px;
+	color: white;
+	text-align: center;
+}
+.button {
+    font-family: 'Replica-Bold',Arial,sans-serif;
+    background-color:#ffdc00;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	cursor: pointer;
+	font-size: 30px;
+	transition-duration: 0.5s;
+}
+.button:hover {
+    background-color: #ffb61a;
+    color: white;
+	transition-duration: 0.5s;
+	}
+input[type=email] {
+    font-family: 'Replica-Bold',Arial,sans-serif;
+    width: 55%;
+    padding: 14px 32px;
+    margin: 2px 0;
+    box-sizing: border-box;
+	font-size: 30px;
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 0; /* Location of the box */
+    left: 0;
+    top: 10%;
+    width: 100%; /* Full width */
+    height: 80%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    max-height:80%;
+}
+
+/* Modal Content */
+.modal-content {
+    position: absolute;
+    font-family: 'Replica-Bold',Arial,sans-serif;
+    background-color:#002D72;
+    margin: auto;
+    left: 40%;
+    padding: 0;
+    border: 1px solid #888;
+    width: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #ffdc00;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    font-family: 'Replica-Bold',Arial,sans-serif;
+    background-color:#ffdc00;
+    color: black;
+}
+
+.modal-body {
+  padding: 2px 16px;
+  font-size: 12px;
+  overflow: auto;
+  text-align: left;
+  color: white;
+   font-family: 'Replica-Bold',Arial,sans-serif;
+}
+#inner {
+  display: table;
+  margin: 0 auto;
+}
+img {
+	margin-top: -250px;
+	position: absolute;
+    right: 50px;
+}
+</style>
+</head>
+<body>
+<div id="overlay">
+  <div id="loader" class="loader"></div>
+</div>
+<img src="http://brainalliance.ca/en/wp-content/uploads/2016/02/Ryerson-rgb_1000X200.png"  >
+
+<!-- seting up the page with the buttons,labels and text boxes -->
+
+<h1>Remove permissions from Google Drive<br>
+<p> Enter the Email and click Search</p>
+<input type="email"  placeholder="Enter Email Adress" id="emailadd" onkeypress="handle(event)">
+<button class="button" id="dosom" onclick="return wait()"> Search</button>
+</h1>
+<!-- The Modal -->
+<div id="myModal" class="modal fade" role="dialog">>
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2 id="header" style="font-size: 16px;"></h2>
+    </div>
+
+    <div class="modal-body">
+      <div id="p"></div>
+      <div id="inner"><button class="button" id="remove" onclick="return removeperm()"> Remove</button></div>
+    </div>
+  </div>
+
+</div>
+
+
+<script>
+var res;
+var email;
+var fileArr;
+var modal = document.getElementById("myModal");
+ var span = document.getElementsByClassName("close")[0];
+function handle(e){
+        if(e.keyCode == 13){
+            e.preventDefault(); // Ensure it is only this code that rus
+			wait();
+        }
+    }
+
+function test()
+{
+  //console.log(email);
+  //google.script.run.withSuccessHandler(doSomething).main(email);
+  //doSomething();
+}
+
+
+function wait(){
+    var exp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    email = document.getElementById("emailadd").value;
+    if (email != ""&& email.match(exp)){
+      document.getElementById("emailadd").value = ""
+      document.getElementById("emailadd").placeholder = "Searching ... "
+      document.getElementById("overlay").style.display = "block";
+      //modal.style.display = "block";
+      //setTimeout(function(){test();}, 1000);
+      return;
+	}
+     alert("Please Enter an Email");
+}
+function doSomething(res)
+{
+  document.getElementById("overlay").style.display = "none";
+  //document.getElementById("loader").style.display = "none";
+  fileArr = res.filesArr;
+  var url = res.descri;
+  document.getElementById("header").innerHTML = email+" has acess to "+res.filesArr.length+" file(s)";
+  if(fileArr.length == 0)
+  {
+    document.getElementById("remove").firstChild.data = "Close";
+    //setTimeout(function(){console.log("sads");}, 1000);
+    document.getElementById("remove").setAttribute("onClick", "close2()");
+    //console.log("sdkljffghsjdol");
+    modal.style.display = "block";
+    return;
+  }
+
+  console.log(res);
+  var a = "<table id= \"datable\" class=\"table\"><thead><tr><th>#</th><th>File Name</th><th>File Description</th><th></th></tr></thead><tbody>";
+  for(var i = 0; i < fileArr.length; i++)
+  {
+    var b =i+1;
+    a+="<tr><td>"+b+"</td><td>"+fileArr[i]+"</td><td><a href=\""+url[i]+"\" target=\"_blank\">Link</a></td><td><span id=\""+b+"\" class=\"close\" onClick=\"te("+b+")\">&times;</span></td></tr>";
+  }
+  a+= "</table>";
+    document.getElementById("p").innerHTML = a;
+
+  modal.style.display = "block";
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  document.getElementById("emailadd").placeholder = "Enter Email adress"
+}
+span.onclick = function() {
+    modal.style.display = "none";
+    document.getElementById("p").innerHTML = "";
+}
+function close2()
+{
+  modal.style.display = "none";
+  document.getElementById("remove").firstChild.data = "Remove";
+  document.getElementById("remove").setAttribute( "onClick","removeperm()");
+  document.getElementById("emailadd").placeholder = "Enter Email Adress"
+
+  document.getElementById("p").innerHTML = "";
+}
+  function te(i)
+  {
+    document.getElementById("datable").deleteRow(i);
+    fileArr.splice((i-1),1);
+    console.log(fileArr);
+    for(var j = i+1; j<=fileArr.length+1; j++)
+    {
+       console.log(j);
+       var temp = document.getElementById(j);
+       temp.id = j-1;
+       document.getElementById("datable").rows[j-1].cells[0].innerHTML = j-1;
+       temp.setAttribute( "onClick", "te("+(j-1)+")");
+
+    }
+  }
+function removeperm()
+{
+  console.log(fileArr);
+
+  google.script.run.withSuccessHandler(close2).removePerm(email,fileArr);
+
+  alert(fileArr.length+" files were unshared with "+ email);
+}
+</script>
+</body>
+
+</html>
