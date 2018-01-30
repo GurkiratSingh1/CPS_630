@@ -23,11 +23,11 @@
 
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Art Works <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#" data-toggle="modal" data-target="#firstArtWork">Artwork 1</a></li>
-          <li><a href="#" data-toggle="modal" data-target="#myModal">Artwork 2</a></li>
-          <li><a href="#" data-toggle="modal" data-target="#myModal">Artwork 3</a></li>
-          <li><a href="#" data-toggle="modal" data-target="#myModal">Artwork 4</a></li>
-          <li><a href="#" data-toggle="modal" data-target="#myModal">Artwork 5</a></li>
+          <li><a href="#" onclick="return monaLisa()">Mona Lisa</a></li>
+          <li><a href="#" onClick="return americangothic()">American Gothic</a></li>
+          <li><a href="#" onClick="return starrynight()">Starry Night</a></li>
+          <li><a href="#" onClick="return thepersistenceofmemory()">The Prsistence Of Memory</a></li>
+          <li><a href="#" onClick="return vangoghselfportrait()">Vangogh Self Portrait</a></li>
         </ul>
       </li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Artists <span class="caret"></span></a>
@@ -48,11 +48,11 @@
      <div class="modal-content">
        <div class="modal-header">
          <button type="button" class="close" data-dismiss="modal">&times;</button>
-         <h4 class="modal-title">Mona Lisa</h4>
+         <h4 id= "modalHeader" class="modal-title"></h4>
 
        </div>
-       <div class="modal-body">
-         <img src="Images/monalisa.jpg" height="200" width="150"/>
+       <div id="modalBody" class="modal-body">
+        <p></p>
        </div>
        <div class="modal-footer">
          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -75,7 +75,46 @@
 <footer>Copyright &copy; by Manrag/Ronak/Gurkirat</footer>
 
 <script type="text/javascript">
+var artmodal = document.getElementById("firstArtWork");
+function monaLisa()
+{
+  //artmodal.img = "Images/monalisa.jpg";
+  document.getElementById("modalHeader").innerHTML = "Mona Lisa";
+  document.getElementById("modalBody").innerHTML = '<img src=\'Images/monalisa.jpg\' height=\'200\' width=\'150\'/>';
 
+  $(artmodal).modal();
+
+}
+function americangothic()
+{
+  document.getElementById("modalHeader").innerHTML = "American Gothic";
+  document.getElementById("modalBody").innerHTML = '<img src=\'Images/americangothic.jpg\' height=\'200\' width=\'150\'/>';
+
+  $(artmodal).modal();
+
+}
+function starrynight()
+{
+  document.getElementById("modalHeader").innerHTML = "Starry Night";
+  document.getElementById("modalBody").innerHTML = '<img src=\'Images/starrynight.jpg\' height=\'200\' width=\'150\'/>';
+
+  $(artmodal).modal();
+}
+
+function thepersistenceofmemory()
+{
+  document.getElementById("modalHeader").innerHTML = "The Persistence Of Memory";
+  document.getElementById("modalBody").innerHTML = '<img src=\'Images/thepersistenceofmemory.png\' height=\'200\' width=\'150\'/>';
+
+  $(artmodal).modal();
+}
+function vangoghselfportrait()
+{
+  document.getElementById("modalHeader").innerHTML = "Vangogh Self Portrait";
+  document.getElementById("modalBody").innerHTML = '<img src=\'Images/vangoghselfportrait.jpg\' height=\'200\' width=\'150\'/>';
+
+  $(artmodal).modal();
+}
 document.getElementById("test").onclick = function(){
  window.open("http://www.google.ca", '_blank', 'width=300,height=200');
   window.open("http://www.google.ca", '_blank', 'width=300,height=200');
