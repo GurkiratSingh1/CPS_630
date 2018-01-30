@@ -23,24 +23,43 @@
 
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Art Works <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#"> Artwork 1</a></li>
-          <li><a href="#" id="test" >Artwork 2</a></li>
-          <li><a href="#">Artwork 3</a></li>
-          <li><a href="#">Artwork 4</a></li>
-          <li><a href="#">Artwork 5</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#myModal"> Artwork 1</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#myModal">Artwork 2</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#myModal">Artwork 3</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#myModal">Artwork 4</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#myModal">Artwork 5</a></li>
         </ul>
       </li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Artists <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Artist 1</a></li>
-          <li><a href="#">Artist 2</a></li>
-          <li><a href="#">Artist 3</a></li>
-          <li><a href="#">Artist 4</a></li>
-          <li><a href="#">Artist 5</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#myModal">Artist 1</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#myModal">Artist 2</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#myModal">Artist 3</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#myModal">Artist 4</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#myModal">Artist 5</a></li>
         </ul>
       </li>
 
     </ul>
+    <div class="modal fade" id="myModal" role="dialog">
+   <div class="modal-dialog">
+
+     <!-- Modal content-->
+     <div class="modal-content">
+       <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <h4 class="modal-title">Modal Header</h4>
+       </div>
+       <div class="modal-body">
+         <p>Some text in the modal.</p>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       </div>
+     </div>
+
+   </div>
+ </div>
   </div>
 </nav>
 
