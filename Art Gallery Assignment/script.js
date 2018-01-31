@@ -39,23 +39,23 @@ function leonardo()
   artistCase();
   document.getElementById("modalHeader").innerHTML = "Leonardo da Vinci";
   document.getElementById("modalBody").innerHTML = '<img src=\'Images/Artists/LeonardodaVinci.jpg\' height=\'400\' width=\'300\'/>';
-  document.getElementById("date").innerHTML = '1503';
-  document.getElementById("type").innerHTML = 'Oil';
-  document.getElementById("dimention").innerHTML = '77 X 53 cm';
-  document.getElementById("location").innerHTML = 'The Louvre';
-  document.getElementById("artist").innerHTML = 'Leonardo da Vinci';
+  document.getElementById("date").innerHTML = 'April 15, 1452';
+  document.getElementById("type").innerHTML = 'May 2, 1519';
+  document.getElementById("dimention").innerHTML = 'Anchiano, Italy';
+  document.getElementById("location").innerHTML = 'Renaissance';
+  document.getElementById("artist").innerHTML = 'Mona Lisa, The Last Supper, Vitruian Man';
   $(artmodal).modal();
 }
 function vincent()
 {
   artistCase();
-  document.getElementById("modalHeader").innerHTML = "Vincent Vangogh";
+  document.getElementById("modalHeader").innerHTML = "Vincent Van Gogh";
   document.getElementById("modalBody").innerHTML = '<img src=\'Images/Artists/VincentvanGogh.jpg\' height=\'400\' width=\'300\'/>';
-  document.getElementById("date").innerHTML = '1503';
-  document.getElementById("type").innerHTML = 'Oil';
-  document.getElementById("dimention").innerHTML = '77 X 53 cm';
-  document.getElementById("location").innerHTML = 'The Louvre';
-  document.getElementById("artist").innerHTML = 'Leonardo da Vinci';
+  document.getElementById("date").innerHTML = 'March 30, 1853';
+  document.getElementById("type").innerHTML = 'July 29, 1890';
+  document.getElementById("dimention").innerHTML = 'France';
+  document.getElementById("location").innerHTML = 'Western Art';
+  document.getElementById("artist").innerHTML = 'The Starry Night, Irises, The Potato Eaters';
   $(artmodal).modal();
 }
 function dali()
@@ -63,11 +63,11 @@ function dali()
   artistCase();
   document.getElementById("modalHeader").innerHTML = "Salvador Dali";
   document.getElementById("modalBody").innerHTML = '<img src=\'Images/Artists/SalvadorDali.jpg\' height=\'400\' width=\'300\'/>';
-  document.getElementById("date").innerHTML = '1503';
-  document.getElementById("type").innerHTML = 'Oil';
-  document.getElementById("dimention").innerHTML = '77 X 53 cm';
-  document.getElementById("location").innerHTML = 'The Louvre';
-  document.getElementById("artist").innerHTML = 'Leonardo da Vinci';
+  document.getElementById("date").innerHTML = ' May 11, 1904';
+  document.getElementById("type").innerHTML = 'January 23, 1989';
+  document.getElementById("dimention").innerHTML = 'Figueres, Spain';
+  document.getElementById("location").innerHTML = 'Surrealism, Cubism, Modern Art';
+  document.getElementById("artist").innerHTML = 'The Persistence of Memory, The Burning Giraffe, The Great Masturbator';
   $(artmodal).modal();
 }
 function picasso()
@@ -75,11 +75,11 @@ function picasso()
   artistCase();
   document.getElementById("modalHeader").innerHTML = "Pablo Picasso";
   document.getElementById("modalBody").innerHTML = '<img src=\'Images/Artists/PabloPicasso.jpg\' height=\'400\' width=\'300\'/>';
-  document.getElementById("date").innerHTML = '1503';
-  document.getElementById("type").innerHTML = 'Oil';
-  document.getElementById("dimention").innerHTML = '77 X 53 cm';
-  document.getElementById("location").innerHTML = 'The Louvre';
-  document.getElementById("artist").innerHTML = 'Leonardo da Vinci';
+  document.getElementById("date").innerHTML = ' October 25, 1881';
+  document.getElementById("type").innerHTML = 'April 8, 1973';
+  document.getElementById("dimention").innerHTML = 'Málaga, Spain';
+  document.getElementById("location").innerHTML = 'Surrealism, Cubism, Modern Art';
+  document.getElementById("artist").innerHTML = 'Guernica, The Old Guitarist, Chicago Picasso';
   $(artmodal).modal();
 }
 function monaLisa()
