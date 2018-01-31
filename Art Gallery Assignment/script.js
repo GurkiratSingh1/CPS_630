@@ -18,56 +18,69 @@ function artistCase()
   document.getElementById("artisttitle").innerHTML = 'Famous Peices';
   document.getElementById("pricetitle").innerHTML = '';
   document.getElementById("genretitle").innerHTML = '';
+  document.getElementById("price").innerHTML = '';
+  document.getElementById("genre").innerHTML = '';
 }
 function grantWood()
 {
+  artistCase();
   document.getElementById("modalHeader").innerHTML = "Grant Wood";
-  document.getElementById("modalBody").innerHTML = '<img src=\'Images/monalisa.jpg\' height=\'400\' width=\'300\'/>';
+  document.getElementById("modalBody").innerHTML = '<img src=\'Images/Artists/GrantWood.jpg\' height=\'400\' width=\'300\'/>';
   document.getElementById("date").innerHTML = '1503';
   document.getElementById("type").innerHTML = 'Oil';
   document.getElementById("dimention").innerHTML = '77 X 53 cm';
   document.getElementById("location").innerHTML = 'The Louvre';
   document.getElementById("artist").innerHTML = 'Leonardo da Vinci';
+  $(artmodal).modal();
+
 }
 function leonardo()
 {
+  artistCase();
   document.getElementById("modalHeader").innerHTML = "Leonardo da Vinci";
-  document.getElementById("modalBody").innerHTML = '<img src=\'Images/monalisa.jpg\' height=\'400\' width=\'300\'/>';
+  document.getElementById("modalBody").innerHTML = '<img src=\'Images/Artists/LeonardodaVinci.jpg\' height=\'400\' width=\'300\'/>';
   document.getElementById("date").innerHTML = '1503';
   document.getElementById("type").innerHTML = 'Oil';
   document.getElementById("dimention").innerHTML = '77 X 53 cm';
   document.getElementById("location").innerHTML = 'The Louvre';
   document.getElementById("artist").innerHTML = 'Leonardo da Vinci';
+  $(artmodal).modal();
 }
 function vincent()
 {
+  artistCase();
   document.getElementById("modalHeader").innerHTML = "Vincent Vangogh";
-  document.getElementById("modalBody").innerHTML = '<img src=\'Images/monalisa.jpg\' height=\'400\' width=\'300\'/>';
+  document.getElementById("modalBody").innerHTML = '<img src=\'Images/Artists/VincentvanGogh.jpg\' height=\'400\' width=\'300\'/>';
   document.getElementById("date").innerHTML = '1503';
   document.getElementById("type").innerHTML = 'Oil';
   document.getElementById("dimention").innerHTML = '77 X 53 cm';
   document.getElementById("location").innerHTML = 'The Louvre';
   document.getElementById("artist").innerHTML = 'Leonardo da Vinci';
+  $(artmodal).modal();
 }
 function dali()
 {
-  document.getElementById("modalHeader").innerHTML = "Mona Lisa";
-  document.getElementById("modalBody").innerHTML = '<img src=\'Images/monalisa.jpg\' height=\'400\' width=\'300\'/>';
+  artistCase();
+  document.getElementById("modalHeader").innerHTML = "Salvador Dali";
+  document.getElementById("modalBody").innerHTML = '<img src=\'Images/Artists/SalvadorDali.jpg\' height=\'400\' width=\'300\'/>';
   document.getElementById("date").innerHTML = '1503';
   document.getElementById("type").innerHTML = 'Oil';
   document.getElementById("dimention").innerHTML = '77 X 53 cm';
   document.getElementById("location").innerHTML = 'The Louvre';
   document.getElementById("artist").innerHTML = 'Leonardo da Vinci';
+  $(artmodal).modal();
 }
 function picasso()
 {
-  document.getElementById("modalHeader").innerHTML = "Mona Lisa";
-  document.getElementById("modalBody").innerHTML = '<img src=\'Images/monalisa.jpg\' height=\'400\' width=\'300\'/>';
+  artistCase();
+  document.getElementById("modalHeader").innerHTML = "Pablo Picasso";
+  document.getElementById("modalBody").innerHTML = '<img src=\'Images/Artists/PabloPicasso.jpg\' height=\'400\' width=\'300\'/>';
   document.getElementById("date").innerHTML = '1503';
   document.getElementById("type").innerHTML = 'Oil';
   document.getElementById("dimention").innerHTML = '77 X 53 cm';
   document.getElementById("location").innerHTML = 'The Louvre';
   document.getElementById("artist").innerHTML = 'Leonardo da Vinci';
+  $(artmodal).modal();
 }
 function monaLisa()
 {
