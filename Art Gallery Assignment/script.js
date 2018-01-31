@@ -26,11 +26,11 @@ function grantWood()
   artistCase();
   document.getElementById("modalHeader").innerHTML = "Grant Wood";
   document.getElementById("modalBody").innerHTML = '<img src=\'Images/Artists/GrantWood.jpg\' height=\'400\' width=\'300\'/>';
-  document.getElementById("date").innerHTML = '1503';
-  document.getElementById("type").innerHTML = 'Oil';
-  document.getElementById("dimention").innerHTML = '77 X 53 cm';
-  document.getElementById("location").innerHTML = 'The Louvre';
-  document.getElementById("artist").innerHTML = 'Leonardo da Vinci';
+  document.getElementById("date").innerHTML = 'February 13, 1891';
+  document.getElementById("type").innerHTML = 'February 12, 1942';
+  document.getElementById("dimention").innerHTML = 'America';
+  document.getElementById("location").innerHTML = 'Gothic';
+  document.getElementById("artist").innerHTML = 'American Gothic, Woman with Plants, Young Corn';
   $(artmodal).modal();
 
 }
