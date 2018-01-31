@@ -3,7 +3,7 @@ function paintingCase()
 {
   document.getElementById("datetitle").innerHTML = 'Date';
   document.getElementById("typetitle").innerHTML = 'Type';
-  document.getElementById("dimentiontitle").innerHTML = 'Dimentions';
+  document.getElementById("dimensionstitle").innerHTML = 'Dimensions';
   document.getElementById("locationtitle").innerHTML = 'Location';
   document.getElementById("artisttitle").innerHTML = 'Artist';
   document.getElementById("pricetitle").innerHTML = 'Price';
@@ -13,7 +13,7 @@ function artistCase()
 {
   document.getElementById("datetitle").innerHTML = 'Date of Birth';
   document.getElementById("typetitle").innerHTML = 'Date of Death';
-  document.getElementById("dimentiontitle").innerHTML = 'Place of Living';
+  document.getElementById("dimensionstitle").innerHTML = 'Place of Living';
   document.getElementById("locationtitle").innerHTML = 'Genre of Painting';
   document.getElementById("artisttitle").innerHTML = 'Famous Peices';
   document.getElementById("pricetitle").innerHTML = '';
