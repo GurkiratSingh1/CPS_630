@@ -74,7 +74,7 @@ function monaLisa()
   //artmodal.img = "Images/monalisa.jpg";
   paintingCase();
   document.getElementById("modalHeader").innerHTML = "Mona Lisa";
-  document.getElementById("modalBody").innerHTML = '<img src=\'Images/monalisa.jpg\' height=\'400\' width=\'300\'/>';
+  document.getElementById("modalBody").innerHTML = '<img src=\'Images/ArtWork/monalisa.jpg\' height=\'400\' width=\'300\'/>';
   document.getElementById("date").innerHTML = '1503';
   document.getElementById("type").innerHTML = 'Oil';
   document.getElementById("dimention").innerHTML = '77 X 53 cm';
@@ -89,7 +89,7 @@ function americangothic()
 {
   paintingCase();
   document.getElementById("modalHeader").innerHTML = "American Gothic";
-  document.getElementById("modalBody").innerHTML = '<img src=\'Images/americangothic.jpg\' height=\'400\' width=\'300\'/>';
+  document.getElementById("modalBody").innerHTML = '<img src=\'Images/ArtWork/americangothic.jpg\' height=\'400\' width=\'300\'/>';
   document.getElementById("date").innerHTML = '1930';
   document.getElementById("type").innerHTML = 'Oil';
   document.getElementById("dimention").innerHTML = '74 X 62 cm';
@@ -104,7 +104,7 @@ function starrynight()
 {
   paintingCase();
   document.getElementById("modalHeader").innerHTML = "Starry Night";
-  document.getElementById("modalBody").innerHTML = '<img src=\'Images/starrynight.jpg\' height=\'400\' width=\'300\'/>';
+  document.getElementById("modalBody").innerHTML = '<img src=\'Images/ArtWork/starrynight.jpg\' height=\'400\' width=\'300\'/>';
   document.getElementById("date").innerHTML = '1889';
   document.getElementById("type").innerHTML = 'Oil';
   document.getElementById("dimention").innerHTML = '74 X 92 cm';
@@ -120,7 +120,7 @@ function thepersistenceofmemory()
   paintingCase();
   document.getElementById("modalHeader").innerHTML = "The Persistence Of Memory";
   document.getElementById("modalBody").innerHTML =
-  '<img src=\'Images/thepersistenceofmemory.png\' height=\'400\' width=\'300\'/>';
+  '<img src=\'Images/ArtWork/thepersistenceofmemory.png\' height=\'400\' width=\'300\'/>';
   document.getElementById("date").innerHTML = '1931';
   document.getElementById("type").innerHTML = 'Oil';
   document.getElementById("dimention").innerHTML = '24 X 33 cm';
@@ -134,7 +134,7 @@ function guernica()
 {
   paintingCase();
   document.getElementById("modalHeader").innerHTML = "Guernica";
-  document.getElementById("modalBody").innerHTML = '<img src=\'Images/guernica.jpg\' height=\'400\' width=\'300\'/>';
+  document.getElementById("modalBody").innerHTML = '<img src=\'Images/ArtWork/guernica.jpg\' height=\'400\' width=\'300\'/>';
   document.getElementById("date").innerHTML = '1937';
   document.getElementById("type").innerHTML = 'Oil';
   document.getElementById("dimention").innerHTML = '3.49 X 7.7 m';
