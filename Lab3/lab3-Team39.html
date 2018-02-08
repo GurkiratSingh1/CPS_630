@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Art Work</title>
+</head>
+<body>
+  <form action="data.php" method="POST">
+    Title: <input type="text" name="title"><br>
+    Description: <input type="text" name="description"><br>
+    Genre: <select>
+    <option value="abstract" name="abstract">Abstract</option>
+    <option value="baroque" name="baroque">Baroque</option>
+    <option value="gothic" name="gothic">Gothic</option>
+    <option value="renaissance" name="renaissance">Renaissance</option>
+    </select> <br>
+    Subject: <select>
+    <option value="invalid" name="invalid">Choose Subject</option>
+    <option value="landscape" name="landscape">Landscape</option>
+    <option value="portrait" name="portrait">Portrait</option>
+    </select><br>
+    Year: <input type="text" name="year"><br>
+    Museum: <input type="text" name="museum"><br>
+    Type: <input type="radio" name="painting" value="painting"> Painting
+    <input type="radio" name="sculpture" value="sculpture"> Sculpture<br>
+    Creative Commons Specification <input type="checkbox" name="Commercial" value="Bike"> I have a bike<br>
+    <input type="checkbox" name="vehicle" value="Car" checked> I have a car<br>
+    <input type="Submit">
+    <input type="Reset" value="Clear Form">
+  </form>
+</body>
+</html>
