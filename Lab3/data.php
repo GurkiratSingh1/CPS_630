@@ -1,3 +1,6 @@
+<html>
+<body>
+
 <?php
 $title = $_POST["title"];
 $description = $_POST["description"];
@@ -10,3 +13,5 @@ $ccs = $_POST["ccs"];
 
 echo $description;
 ?>
+</body>
+</html>
