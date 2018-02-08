@@ -1,3 +1,6 @@
+<html>
+<body>
+
 <?php
 $title = $_POST["title"];
 $description = $_POST["description"];
@@ -8,3 +11,5 @@ $phone = $_POST["phone"];
 
 echo $description;
 ?>
+</body>
+</html>
