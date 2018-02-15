@@ -1,0 +1,64 @@
+
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+      <title> PHP is an Object-Oriented Programming Language </title>
+      <link type='text/css' rel='stylesheet' href='style.css'/>
+    </head>
+
+
+<body>
+      <p>
+      <?php
+        class Student {
+            public $firstName;
+            public $lastName;
+            public $Id;
+            
+            public function __construct($firstname, $lastname, $id) 
+            {
+              $this->firstName = $firstname;
+              $this->lastName = $lastname;
+              $this->Id = $id;
+            }
+            
+            public function newStudent() 
+            {
+              return " New Student is " . $this->firstName . " " . $this->lastName . ;
+            }
+          }
+          public function set_fname($new_fname) 
+          {
+              $this->firstName = $new_fname;
+          }
+          public function get_fname() 
+          {
+              return $this->firstName;
+          }
+        
+          public function setLast()
+          {
+              $this->lastName= $new_lname;
+          }
+          public function getLast()
+          {
+              return $this->lastName;
+          }
+          public function setID()
+          {
+              $this->Id = $new_id;
+          }
+          public function getID()
+          {
+              return $this->id;
+          }
+        $st-obj = new Student('firstName1', 'lastName1', 100000);
+        echo $st-obj->newStudent(); 
+        ?>
+        </p>
+    </body>
+</html>
+
+
