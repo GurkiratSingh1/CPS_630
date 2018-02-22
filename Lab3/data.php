@@ -5,7 +5,7 @@ $genre = $_POST[Genre];
 $subject = $_POST[Subject];
 $year = $_POST["year"];
 $museum = $_POST["museum"];
-$type = $_POST["type"];
+$type = $_POST["painting"];
 $ccs = $_POST["ccs"];
 
 echo "Title: " + $title;
